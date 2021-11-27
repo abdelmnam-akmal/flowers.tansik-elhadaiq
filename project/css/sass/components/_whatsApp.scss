@@ -1,0 +1,37 @@
+.whatsapp {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    z-index: 999;
+    @media #{$maxMobile} {
+        bottom: 20px;
+        right: 20px;
+    }
+    a {
+        display: block;
+        padding: 7px 11px;
+        background-color: $whatsapp;
+        border-radius: 15px;
+        position: relative;
+        span {
+            position: absolute;
+            top: 15px;
+            left: -105px;
+            background-color: $whatsapp;
+            color: $flatFFF;
+            padding: 2px 5px;
+            border-radius: 5px;
+            transition: .4s ease;
+            display: none;
+        }
+        i {
+            font-size: 40px;
+            color: $flatFFF;
+        }
+    }
+    &:hover {
+        span {
+            display: block;
+        }
+    }
+}

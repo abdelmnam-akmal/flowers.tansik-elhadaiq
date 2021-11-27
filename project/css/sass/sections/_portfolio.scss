@@ -1,0 +1,80 @@
+.portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(238, 238, 238, .7);
+    transition: .4s;
+    &:hover {
+        background-color: $flatEEE;
+    }
+    .portfolio-header {
+        .h3 {
+            @extend %h3;
+        }
+        .desc {
+            color: $colorSecondry;
+        }
+    }
+    .btns-portfolio {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        ul {
+            margin: 0;
+            padding: 0;
+            @extend %center-flex;
+            flex-wrap: wrap;
+            li {
+                padding: 6px 10px;
+                border: 1px solid $colorSecondry;
+                background-color: $flatFFF;
+                margin-left: 15px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                transition: .4s;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $defaultColor;
+                    border: 1px solid $defaultColor;
+                    color: $flatFFF;
+                }
+                &:last-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .image-portfolio {
+        padding: 5px;
+        .image-cont {
+            height: 250px;
+            width: 100%;
+            @extend %hidden;
+            border-radius: 5px;
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid $flatEF;
+                transition: .4s ease;
+            }
+        }
+        &:nth-of-type(odd) {
+            .image-cont {
+                img {
+                    &:hover {
+                        transform: scale(1.09)rotate(2deg);
+                    }
+                }
+            }
+        }
+        &:nth-of-type(even) {
+            .image-cont {
+                img {
+                    transform: scale(1.09)rotate(2deg);
+                    &:hover {
+                        transform: scale(1)rotate(0);
+                    }
+                }
+            }
+        }
+    }
+}

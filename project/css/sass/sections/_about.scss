@@ -1,0 +1,57 @@
+.about {
+    margin-top: -50px;
+    margin-bottom: 100px;
+    @extend %hidden;
+    @media #{$maxMobile} {
+        margin-top: 0;
+    }
+    .title-header {
+        margin-bottom: 70px;
+        h2 {
+            font-size: 40px;
+            color: $defaultColor;
+        }
+    }
+    .about-container {
+        @extend %center-flex;
+        > div {
+            .title-about {
+                font-size: 25px;
+                color: $defaultColor;
+                margin-bottom: 25px;
+            }
+            .desc-about {
+                line-height: 1.8;
+                font-size: 17px;
+                span {
+                    font-size: 25px;
+                    color: $colorSecondry;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .about-images {
+        .images-container {
+            height: 300px;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 5px;
+            > div {
+                height: 100%;
+                overflow: hidden;
+                img {
+                    height:100%;
+                    width: 100%;
+                    border: 2px solid $defaultColor;
+                    box-shadow: 5px 4px 22px -14px $defaultColor;
+                    transition: .4s;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

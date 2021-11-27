@@ -1,0 +1,29 @@
+.connect {
+    background-color: $altColor;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: -7px;
+    @extend %hidden;
+    .content-social {
+        ul {
+            padding: 0;
+            margin: 0;
+            @extend %center-flex;
+            li {
+                padding-right: 15px;
+                padding-left: 15px;
+                a {
+                    text-decoration: none;
+                    i {
+                        color: $colorSecondry;
+                        font-size: 30px;
+                        transition: .4s;
+                        &:hover {
+                            color: $defaultColor
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

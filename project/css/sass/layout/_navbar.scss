@@ -1,0 +1,35 @@
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    background-color: $altColor;
+    &.shadow-nav {
+        box-shadow: 7px -1px 9px 2px $iconColor;
+    }
+    .title-web {
+        @media #{$maxMobile} {
+            margin-bottom: 20px;
+        }
+        a {
+            color: $defaultColor;
+            font-size: 22px;
+            @extend %weight600;
+        }
+    }
+    .links-contact {
+        > a {
+            @extend %center-flex;
+            color: $defaultColor;
+            i {
+                color: $colorSecondry;
+            }
+            span {
+                margin-right: 10px;
+            }
+        }
+    }
+}

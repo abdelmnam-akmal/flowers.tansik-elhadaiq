@@ -1,0 +1,63 @@
+.header {
+    position: relative;
+    @extend %hidden;
+    .overlay {
+        @extend %overlay;
+        @extend %center-flex;
+        .caption {
+            color: $flatFFF;
+            overflow: hidden;
+            @media #{$maxMobile} {
+                margin-top: 110px;
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+            }
+            .title-page {
+                margin-bottom: 20px;
+                position: relative;
+                padding-bottom: 15px;
+                overflow: hidden;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 25%;
+                    height: 2px;
+                    background-color: $flatFFF;
+                    transform: translateX(150%);
+                }
+            }
+            .desc-page {
+                max-width: 1000px;
+                margin-bottom: 30px;
+                font-size: 18px;
+                line-height: 1.8;
+            }
+            .contact {
+                padding: 8px 35px;
+                a {
+                    color: $flatFFF;
+                }
+            }
+        }
+    }
+    .container-fluid {
+        .container-carousel {
+            padding: 0;
+            > div {
+                .swiper {
+                    height: 100vh;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

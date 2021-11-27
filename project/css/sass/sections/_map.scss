@@ -1,0 +1,14 @@
+.map {
+    @extend %hidden;
+    .container-fluid {
+        padding: 0;
+        .map-container {
+            > div {
+                iframe {
+                    width: 100%;
+                    height: 450px;
+                }
+            }
+        }
+    }
+}

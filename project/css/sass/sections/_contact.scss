@@ -1,0 +1,26 @@
+.contact-per {
+    padding-top: 40px;
+    background-color: $altColor;
+    @extend %hidden;
+    .contact-container {
+        @media #{$maxMobile} {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        > div {
+            i {
+                margin-left: 15px;
+                font-size: 25px;
+                color: $colorSecondry;
+                cursor: pointer;
+                &:hover {
+                    animation: rotate .7s ease-out;
+                }
+            }
+            span {
+                font-size: 20px;
+                color: $defaultColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $flatblack;
+    @extend %hidden;
+    .abdelmnam {
+        @extend %center-flex;
+        color: $flatFFF;
+        @media #{$maxMobile} {
+            margin-bottom: 25px;
+        }
+    }
+    .logo-almodaser {
+        > div {
+            @extend %center-flex;
+            span {
+                margin-left: 15px;
+                color: $flatFFF;
+            }
+            .image-href {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                a {
+                    cursor: pointer;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        @extend %radius50;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
